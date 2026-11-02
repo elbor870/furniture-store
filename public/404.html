@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Перенаправление...</title>
+    <script>
+      // Сохраняем текущий путь, чтобы вернуть пользователя туда, куда он шел
+      sessionStorage.redirect = location.href;
+      // Перенаправляем на корень проекта
+      location.replace('/furniture-store/');
+    </script>
+  </head>
+  <body></body>
+</html>
