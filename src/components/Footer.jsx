@@ -1,14 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 export default function Footer() {
-  return (
-    <footer className="footer"><div className="container">
-      <div className="footer-grid">
-        <div><h4>Мебель&Интерьер</h4><p style={{ fontSize: 14 }}>Мебель и предметы интерьера для уютного дома.</p></div>
-        <div><h4>Каталог</h4><ul><li><a href="/catalog">Все товары</a></li><li><a href="/catalog">Новинки</a></li></ul></div>
-        <div><h4>Покупателям</h4><ul><li><a href="#">Доставка</a></li><li><a href="#">Оплата</a></li></ul></div>
-        <div><h4>Контакты</h4><ul><li>+7 (800) 000-00-00</li><li>info@furniture.ru</li></ul></div>
-      </div>
-      <div className="footer-bottom">© 2026 Мебель&Интерьер.</div>
-    </div></footer>
-  )
+ return <footer className="footer"><div className="container footer-main"><div className="footer-brand"><Link to="/" className="logo">FORMA<span>HOME</span></Link><p>Создаём пространство,<br />в котором хочется жить.</p><span className="footer-note">МЕБЕЛЬ · СВЕТ · ДЕТАЛИ</span></div><div><h4>Коллекция</h4><ul><li><Link to="/catalog">Все предметы</Link></li><li><Link to="/catalog?category=Гостиная">Гостиная</Link></li><li><Link to="/catalog?category=Спальня">Спальня</Link></li><li><Link to="/catalog?category=Освещение">Освещение</Link></li></ul></div><div><h4>Покупателям</h4><ul><li><Link to="/cart">Корзина</Link></li><li><Link to="/profile">Личный кабинет</Link></li><li><a href="mailto:hello@formahome.ru">Связаться с нами</a></li></ul></div><div className="footer-contact"><h4>Есть вопросы?</h4><a href="mailto:hello@formahome.ru">hello@formahome.ru</a><p>Пн — Пт · 10:00–19:00</p></div></div><div className="container footer-bottom"><span>© 2026 FORMA HOME. Учебный проект.</span><span>Курсовая работа · 454 группа</span><Link to="/catalog">Исследовать каталог ↗</Link></div></footer>
 }
